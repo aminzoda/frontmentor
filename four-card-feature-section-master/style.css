@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-gray1: hsl(0, 0%, 100%);
+}
+
+img {
+  object-fit: contain;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--very-light-gray1);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 28px 0;
+}
+
+.paragraf {
+  width: 512px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.paragraf h1 {
+  font-weight: 200;
+  font-size: 1.8rem;
+  color: var(--very-dark-blue);
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+p {
+  color: var(--grayish-blue);
+  font-size: 0.8rem;
+}
+
+.technologies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 28px;
+  row-gap: 28px;
+  margin-top: 50px;
+}
+
+.card {
+  position: relative;
+  width: 330px;
+  background-color: var(--very-light-gray);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 1px rgba(221, 221, 221, 1);
+  padding: 22px 22px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+}
+
+.technologies > .card:first-of-type::before {
+  background-color: var(--cyan);
+}
+
+.cards > .card:nth-of-type(1)::before {
+  background-color: var(--red);
+}
+
+.cards > .card:nth-of-type(2)::before {
+  background-color: var(--orange);
+}
+
+.technologies > .card:last-of-type::before {
+  background-color: var(--blue);
+}
+
+.card h1 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  column-gap: 28px;
+  row-gap: 28px;
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
+  margin-bottom: 14px;
+}
+
+.icon img {
+  width: 50px;
+}
+
+@media (max-width: 667px) {
+  .paragraf {
+    width: auto;
+  
+}
+}

@@ -1,0 +1,267 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+}
+
+img {
+  object-fit: contain;
+}
+
+body {
+  display: grid;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.huddle-section {
+  display: grid;
+  grid-template-columns: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/bg-hero-desktop.svg);
+  background-color: var(--Very-Pale-Cyan);
+  gap: 80px;
+  height: 100vh;
+}
+
+.a_1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.a_1 .logo img {
+  width: 80%;
+}
+
+.btns button {
+  width: 200px;
+  height: 50px;
+  border-radius: 32px;
+  border: none;
+}
+
+.a_2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.a_2 h1 {
+  font-size: 2.6rem;
+}
+
+.a_2 p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 24px;
+}
+
+.get_start {
+  width: 300px;
+  height: 58px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 36px;
+  border-radius: 28px;
+  background-color: var(--Pink);
+}
+
+.build-mock {
+  width: 550px;
+  margin-right: 50px;
+}
+
+.illustration-image img {
+  width: 750px;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 180px;
+  gap: 42px;
+}
+
+.feed {
+  width: 85%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 22px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.paragraf {
+  max-width: 520px;
+}
+
+.paragraf h1 {
+  font-size: 1.9rem;
+}
+
+.paragraf p {
+  color: var(--Grayish-Blue);
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin-top: 16px;
+}
+
+.img_feed img {
+  width: 420px;
+}
+
+footer {
+  background: hsl(192, 100%, 9%);
+  color: white;
+  padding: 2rem 4rem;
+  position: relative;
+  height: 500px;
+  margin-top: 500px;
+}
+
+.footer-floating-box {
+  background: white;
+  width: 800px;
+  height: 240px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 3rem;
+  top: -150px;
+  right: 350px;
+  z-index: 1;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.dark-description {
+  color: hsl(192, 100%, 9%);
+  margin-bottom: 1rem;
+}
+
+.logo-footer {
+  filter: invert(100%) sepia(6%) saturate(26%) hue-rotate(225deg)
+    brightness(108%) contrast(105%);
+  margin-top: 120px;
+}
+
+.row-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem 0;
+  justify-items: center;
+}
+
+.col-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconed-text {
+  display: flex;
+  align-items: flex-start;
+  color: var(--Grayish-Blue);
+  gap: 20px;
+  padding: 0.5rem;
+}
+
+.footer-link {
+  color: hsl(208, 11%, 55%);
+  text-decoration: none;
+  margin: 0.5rem 0;
+  font-weight: 700;
+  transition: all 1s ease-in-out;
+  font-size: 1.3rem;
+}
+
+.icon-row svg {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 0.3rem;
+  height: 34px;
+  width: 34px;
+  margin-right: 0.3rem;
+}
+
+@media (max-width: 1024px) {
+  .huddle-section {
+    grid-template-columns: column;
+  }
+
+  .a_1 {
+    padding: 22px;
+  }
+
+  .a_2 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .build-mock {
+    margin: 0;
+  }
+
+  .illustration-image img {
+    width: 80%;
+    margin-top: 32px;
+  }
+
+  .feed {
+    flex-direction: column;
+    text-align: center;
+    padding: 62px;
+    height: auto;
+    gap: 50px;
+  }
+
+  footer {
+    padding: 1rem;
+    background: hsl(192, 100%, 9%);
+    height: auto;
+  }
+
+  .footer-floating-box {
+    width: max-content;
+    top: -160px;
+    right: 28px;
+    z-index: 1;
+    flex-direction: column;
+  }
+
+  .row-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+  }
+}

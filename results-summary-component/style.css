@@ -1,0 +1,241 @@
+:root {
+  --red: hsl(0, 100%, 67%);
+  --dark-red: hsl(6, 100%, 98%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --dark-yellow: hsl(42, 100%, 97%);
+  --green-teal: hsl(166, 100%, 37%);
+  --dark-green-teal: hsl(173, 53%, 97%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --dark-slate-blue: hsl(240, 71%, 97%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: contain;
+}
+
+body {
+  background-color: var(--pale-blue);
+  font-family: "Outfit", sans-serif;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 580px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.content-1 {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--light-royal-blue);
+  border-radius: 24px;
+}
+
+.content-1 .prg {
+  color: var(--light-lavender);
+  font-weight: 500;
+  margin-top: 22px;
+  font-size: 19px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background: linear-gradient(var(--cobalt-blue), var(--light-royal-blue));
+  margin-top: 22px;
+}
+
+.circle .number {
+  font-size: 54px;
+  font-weight: 550;
+  color: var(--white);
+}
+
+.circle .protcent {
+  font-size: 16px;
+  color: var(--light-lavender);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--white);
+  margin-top: 32px;
+}
+
+.content-1 .p2 {
+  color: var(--light-lavender);
+  margin-top: 20px;
+  margin-bottom: 26px;
+  font-size: 18px;
+  padding: 0 32px;
+}
+
+.content-2 {
+  background-color: var(--white);
+  width: 290px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 18px 0px 0px 32px;
+}
+
+.icons {
+  display: grid;
+  place-items: center;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.icons > * {
+  position: relative;
+  align-items: center;
+  display: flex;
+  width: 224px;
+  height: 42px;
+  border-radius: 8px;
+  outline: 1px solid red;
+  column-gap: 11px;
+  padding: 0 8px;
+}
+
+.icons > *::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: 1px solid white;
+  border-radius: 7px;
+}
+
+.icons > * > .num-of-drob {
+  white-space: nowrap;
+}
+
+.icon-1 {
+  background-color: var(--dark-red);
+  outline-color: var(--red);
+
+  & .title {
+    color: var(--red);
+  }
+}
+
+.icon-2 {
+  background-color: var(--dark-yellow);
+  outline-color: var(--orangey-yellow);
+
+  & .title {
+    color: var(--orangey-yellow);
+  }
+}
+
+.icon-3 {
+  background-color: var(--dark-green-teal);
+  outline-color: var(--green-teal);
+
+  & .title {
+    color: var(--green-teal);
+  }
+}
+
+.icon-4 {
+  background-color: var(--dark-slate-blue);
+  outline-color: var(--cobalt-blue);
+
+  & .title {
+    color: var(--cobalt-blue);
+  }
+}
+
+.num-of-drob {
+  word-spacing: 4px;
+  margin-left: auto;
+}
+.btn {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.btn button {
+  width: 224px;
+  height: 42px;
+  align-items: center;
+  border-radius: 24px;
+  border: none;
+  background-color: var(--dark-gray-blue);
+  margin-top: 12px;
+  color: white;
+  font-size: 14px;
+}
+.btn :hover {
+  background-color: var(--light-royal-blue);
+  transition: all 1s;
+}
+
+@media (max-width: 480px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .content-1 {
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .content-2 {
+    margin: 0 auto;
+    width: 100%;
+    max-width: calc(100% - 20px);
+    padding: 0 10px;
+  }
+
+  .content-1 .p2 {
+    padding: 0 32px;
+  }
+
+  .icon {
+    width: 100%;
+  }
+
+  .btn {
+    margin-bottom: 14px;
+  }
+}

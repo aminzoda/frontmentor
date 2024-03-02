@@ -1,0 +1,261 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Pale-Violet: hsl(276, 100%, 81%);
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  --Grayish-Blue: hsl(206, 6%, 79%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+img {
+  object-fit: contain;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-left-background,
+.bottom-right-background {
+  position: fixed;
+  border-radius: 100vmax;
+  height: 130vh;
+  width: 500px;
+}
+
+.top-left-background {
+  top: -40vh;
+  left: -100px;
+  background-color: var(--Moderate-Violet);
+}
+
+.bottom-right-background {
+  bottom: -40vh;
+  right: -100px;
+  background-color: var(--Grayish-Blue);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  gap: 190px;
+  width: 100%;
+  height: 100vh;
+}
+
+.mobile {
+  position: relative;
+  width: 280px;
+  height: auto;
+  overflow: hidden;
+  border: 12px solid white;
+  border-radius: 32px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--Light-Grayish-Violet);
+}
+
+.mobile::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 22px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+.samuel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Light-Magenta);
+}
+
+.samuel img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.massage-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.mobile p {
+  color: var(--Moderate-Violet);
+  font-size: 12px;
+}
+
+.massage-1 :first-child,
+.massage-1 :last-child {
+  padding: 8px;
+  width: 170px;
+  border-radius: 12px;
+  background-color: var(--Dark-Grayish-Violet);
+}
+
+.dogs-punkt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 8px;
+}
+
+.dogs img {
+  width: 40px;
+  border-radius: 12px;
+}
+
+.massage-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.massage-2 :first-child {
+  padding: 8px;
+  width: 170px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.massage-2 :last-child {
+  padding: 12px;
+  width: 120px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.massage-3 {
+  width: 180px;
+  padding: 8px;
+}
+
+.massage-3 p {
+  padding: 8px;
+  border-radius: 12px;
+  background-color: var(--Dark-Grayish-Violet);
+}
+
+.span-paragraf {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+}
+
+.span-paragraf :first-child,
+.span-paragraf :last-child {
+  width: 200px;
+  align-items: flex-end;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: var(--Moderate-Violet);
+}
+
+.input {
+  padding: 8px;
+}
+
+button {
+  display: flex;
+  gap: 72px;
+}
+
+.input button {
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  padding: 8px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 32px;
+  background-color: var(--White);
+  color: var(--Dark-Grayish-Violet);
+}
+
+.right-svg {
+  padding: 4px;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 52px;
+  background-color: var(--Very-Dark-Desaturated-Violet);
+}
+
+.paragraf {
+  width: 390px;
+}
+
+.paragraf p {
+  color: var(--Dark-Grayish-Violet);
+  line-height: 24px;
+  margin-top: 18px;
+}
+
+@media (max-width: 1024px) {
+  .top-left-background,
+  .bottom-right-background {
+    border-radius: 100vmax;
+    height: 130vh;
+    width: 400px;
+  }
+
+  .top-left-background {
+    top: -80vh;
+    left: -250px;
+  }
+
+  .bottom-right-background {
+    bottom: -80vh;
+    right: -220px;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    width: 100%;
+    height: auto;
+    padding: 42px;
+    overflow: hidden;
+  }
+
+  .paragraf {
+    padding: 58px;
+  }
+}

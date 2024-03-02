@@ -1,0 +1,121 @@
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --soft1-violet: hsl(277, 51%, 56%);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --slightly1-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: contain;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 140vh;
+  height: auto;
+  background-color: var(--dark-desaturated-blue);
+}
+
+.content-1 {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 70px;
+  justify-content: space-evenly;
+}
+
+h1 {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+}
+
+h1 .insight {
+  color: var(--soft-violet);
+}
+
+.discover {
+  color: var(--slightly1-transparent-white);
+  font-family: "Inter", sans-serif;
+  line-height: 22px;
+  margin-top: 32px;
+}
+
+.stats {
+  display: flex;
+  margin-top: 52px;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 46px;
+}
+
+.stats h1 {
+  font-size: 22px;
+  font-weight: 550;
+}
+
+.stats p {
+  color: var(--slightly1-transparent-white);
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.picture {
+  max-width: 100%;
+  background-color: var(--soft-violet);
+}
+
+.picture img {
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    width: 90%;
+    height: auto;
+  }
+
+  .content-1 {
+    padding: 28px 8px;
+  }
+
+  .stats {
+    flex-direction: column;
+    margin: 0;
+    margin-top: 32px;
+  }
+
+  .stat {
+    margin: 10px;
+  }
+
+  .picture {
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+}

@@ -1,0 +1,146 @@
+:root {
+  --MODERATE-VIOLET: hsl(263, 55%, 52%);
+  --VERY-DARK-GRAYISH-BLUE: hsl(217, 19%, 35%);
+  --VERY-DARK-BLACKISH-BLUE: hsl(219, 29%, 14%);
+  --WHITE: hsl(0, 0%, 100%);
+  --LIGHT-GRAY: hsl(0, 0%, 81%);
+  --LIGHT-GRAYISH-BLUE: hsl(210, 46%, 95%);
+  --FN: "Barlow Semi Condensed", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+  font-size: 14px;
+  background-color: var(--LIGHT-GRAYISH-BLUE);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: var(--FN);
+}
+
+main {
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 1.5rem;
+  margin: 1.5rem;
+}
+
+.Clifford {
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 0;
+}
+
+.card-purple {
+  background-color: var(--MODERATE-VIOLET);
+}
+
+.card {
+  padding: 1.8rem;
+  border-radius: 0.7rem;
+  max-width: calc((1200px - 3 * 1.5rem) / 4 * 2 + 1.5rem);
+}
+
+.card_client {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+.card_client_pic {
+  float: left;
+  margin-right: 1rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  font-weight: 500;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.white {
+  color: var(--WHITE);
+}
+
+.transparent50 {
+  opacity: 50%;
+}
+
+.card__tldr {
+  margin: 1rem 0;
+  font-size: 1.6em;
+}
+
+article {
+    margin-top: 22px;
+}
+
+article :first-child {
+    font-size: 1.2rem;
+}
+
+.transparent70 {
+  opacity: 70%;
+  margin-top: 24px;
+  line-height: 20px;
+}
+
+.card-grey {
+  background-color: var(--VERY-DARK-GRAYISH-BLUE);
+}
+
+.card-white {
+  background-color: var(--WHITE);
+}
+
+.dark-blue {
+    color: var(--VERY-DARK-GRAYISH-BLUE);
+}
+
+.card-dark-blue {
+  background-color: var(--VERY-DARK-BLACKISH-BLUE);
+}
+
+.card-white {
+  background-color: var(--WHITE);
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "Cl Cl Wa Wh"
+      "Ha Ab Ab Wh";
+  }
+
+  .Clifford {
+    grid-area: Cl;
+  }
+
+  .Walters {
+    grid-area: Wa;
+  }
+
+  .Harmon {
+    grid-area: Ha;
+  }
+
+  .Abrams {
+    grid-area: Ab;
+  }
+
+  .Whittle {
+    grid-area: Wh;
+  }
+}

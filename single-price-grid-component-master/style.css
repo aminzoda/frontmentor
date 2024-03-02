@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cyan: hsl(179, 61%, 44%);
+  --cyan1: hsl(179, 47%, 52%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --gayish-blue: hsl(218, 22%, 67%);
+}
+
+img {
+  object-fit: contain;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--light-gray);
+  font-family: "Karla", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.content-1 {
+  padding: 40px 40px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--cyan);
+}
+
+h2 {
+  margin-top: 28px;
+  font-size: 1.3rem;
+  color: var(--bright-yellow);
+}
+
+.content-1 p {
+  width: 95%;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--gayish-blue);
+}
+.content-2 {
+  width: 100%;
+  display: flex;
+  color: white;
+}
+
+.access1 {
+  width: 50%;
+  padding: 50px 40px;
+  background-color: var(--cyan);
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+.dollar {
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+  margin-top: 16px;
+}
+
+.dollar :first-child {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.dollar :last-child {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--light-gray);
+}
+
+.access1 p {
+  font-size: 1.1rem;
+  margin-top: 12px;
+  color: var(--light-gray);
+}
+
+button {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 28px;
+  color: var(--light-gray);
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Karla", sans-serif;
+  background-color: var(--bright-yellow);
+}
+.access2 {
+  width: 50%;
+  padding: 50px 40px;
+  background-color: var(--cyan1);
+}
+
+.access2 p {
+  margin-top: 24px;
+  line-height: 24px;
+  color: var(--light-gray);
+}
+
+@media (max-width: 760px) {
+  body {
+    flex-direction: column;
+  }
+
+  section {
+    width: 358px;
+    padding: 8px;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .content-1 {
+    padding: 30px 20px;
+  }
+
+  .content-2 {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .access1 {
+    width: 100%;
+  }
+
+  .access2 {
+    width: 100%;
+  }
+}

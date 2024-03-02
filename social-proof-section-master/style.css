@@ -1,0 +1,190 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+img {
+  object-fit: contain;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min(100%, 1200px);
+}
+
+section {
+  padding-inline: 8px;
+  margin-top: 48px;
+}
+
+.first-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  column-gap: 40px;
+}
+
+.first-section > * {
+  flex: 1 1 0;
+}
+
+.border-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 20px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  column-gap: 42px;
+  width: 480px;
+  height: 52px;
+  padding: 0 42px;
+  border-radius: 8px;
+  background-color: var(--light-grayish-magenta);
+}
+
+.second-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 28px;
+  row-gap: 28px;
+}
+
+h1 {
+  color: var(--very-dark-magenta);
+  font-size: 3.3rem;
+}
+
+header p {
+  margin-top: 2rem;
+  line-height: 22px;
+  color: var(--dark-grayish-magenta);
+  font-weight: 500;
+}
+
+.icon-star img {
+  margin: 2px;
+}
+
+.icon-paragraf p {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+}
+
+.users {
+  width: 376px;
+  height: 246px;
+  border-radius: 12px;
+  background-color: var(--very-dark-magenta);
+  padding: 32px 32px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+  margin-bottom: 28px;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 48px;
+}
+
+.people {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+
+.paragraf p {
+  color: var(--white);
+  line-height: 22px;
+}
+
+.s1 {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.s2 {
+  color: var(--soft-pink);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@media (min-width: 1024px) {
+  .icons:nth-child(1) {
+    margin-right: 80px;
+  }
+
+  .icons:nth-child(2) {
+    margin-right: 40px;
+  }
+
+  .users:nth-child(2) {
+    margin-top: 40px;
+  }
+
+  .users:nth-child(3) {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 867px) {
+  .first-section {
+    justify-content: center;
+    text-align: center;
+    width: 320px;
+  }
+
+  .border-icons {
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+  }
+
+  .icons {
+    width: 288px;
+    height: 60px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .users {
+    width: 288px;
+    height: 267px;
+    border-radius: 12px;
+    background-color: var(--very-dark-magenta);
+    padding: 32px 44px;
+  }
+}

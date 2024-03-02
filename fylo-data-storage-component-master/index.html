@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Fylo data storage component</title>
+</head>
+
+<body>
+  <main class="container">
+    <div class="left">
+      <img src="images/logo.svg" alt="" class="logo">
+      <ul class="icons">
+        <li><img src="images/icon-document.svg" alt=""></li>
+        <li><img src="images/icon-folder.svg" alt=""></li>
+        <li><img src="images/icon-upload.svg" alt=""></li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="remain-storage">
+        <p>185 <span>GB Left</span></p>
+      </div>
+      <p>You've used <span>815 GB</span> of your storage</p>
+      <label for="range">
+        <input type="range" name="range" id="range" min="0" max="1000" value="815" oninput="changeValue(this)">
+      </label>
+      <div>
+        <p>0 GB</p>
+        <p>1000 GB</p>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
