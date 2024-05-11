@@ -1,4 +1,4 @@
-const accordingBtns = document.querySelectorAll(".according-btn");
+const accordingBtns = document.querySelectorAll(".accordion-btn");
 
 accordingBtns.forEach((btn) => {
   btn.addEventListener("click", function () {
