@@ -13,7 +13,7 @@
 
 body {
   background-color: var(--Light-pink);
-  background-image: url(assets/images/background-pattern-desktop.svg);
+  background-image: url(html-css-js\faq-accordionjs\assets\images\background-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: "Work Sans", "sans-serif";
@@ -94,6 +94,6 @@ button:hover {
 
 @media (max-width: 540px) {
   body {
-    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-image: url(html-css-js\faq-accordionjs\assets\images\background-pattern-mobile.svg);
   }
 }
