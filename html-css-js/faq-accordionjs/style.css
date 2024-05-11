@@ -64,30 +64,30 @@ button:hover {
   font-weight: 700;
 }
 
-.according-btn {
-    font-weight: 700;
+.accordion-btn {
+  font-weight: 700;
 }
 
-.according-container .according-item:not(:last-child) {
+.accordion-container .accordion-item:not(:last-child) {
   border-bottom: 2px solid var(--Light-pink);
 }
 
-.according-item .icon img {
+.accordion-item .icon img {
   min-width: 30px;
 }
 
-.according-item .icons .minus-icon {
+.accordion-item .icons .minus-icon {
   display: none;
 }
 
-.according-description {
+.accordion-description {
   background-color: var(--White);
   max-height: 0;
   overflow: hidden;
   transition: max-height 200ms ease;
 }
 
-.according-description p {
+.accordion-description p {
   color: var(--Grayish-purple);
   padding: 1.5rem 0;
 }
