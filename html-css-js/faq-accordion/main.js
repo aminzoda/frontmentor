@@ -1,21 +1,28 @@
-const accordingBtns = document.querySelectorAll(".accordion-btn");
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionBtns = document.querySelectorAll(".accordion-btn");
 
-accordingBtns.forEach((btn) => {
-  btn.addEventListener("click", function () {
-        this.classList.toggle("active");
-        const accordingDescription = this.nextElementSibling;
-        const plusIcon = this.querySelector(".plus-icon");
-        const minusIcon = this.querySelector(".minus-icon");
+  accordionBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const isActive = this.classList.toggle("active");
+      const accordionDescription = this.nextElementSibling;
+      const [plusIcon, minusIcon] = this.querySelectorAll(
+        ".plus-icon, .minus-icon"
+      );
 
-        if (accordingDescription.style.maxHeight) {
-            accordingDescription.style.maxHeight = null;
-            plusIcon.style.display = "block";
-            minusIcon.style.display = "none";
-        } else {
-            accordingDescription.style.maxHeight =
-            accordingDescription.scrollHeight + "px";
-            plusIcon.style.display = "none";
-            minusIcon.style.display = "block";
+      plusIcon.style.display = isActive ? "none" : "block";
+      minusIcon.style.display = isActive ? "block" : "none";
+      accordionDescription.style.maxHeight = isActive
+        ? accordionDescription.scrollHeight + "px"
+        : null;
+
+      accordionBtns.forEach(function (otherBtn) {
+        if (otherBtn !== btn && otherBtn.classList.contains("active")) {
+          otherBtn.classList.remove("active");
+          otherBtn.querySelector(".plus-icon").style.display = "block";
+          otherBtn.querySelector(".minus-icon").style.display = "none";
+          otherBtn.nextElementSibling.style.maxHeight = null;
         }
-    })
-})
+      });
+    });
+  });
+});
