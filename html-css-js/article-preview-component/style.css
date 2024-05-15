@@ -65,11 +65,17 @@ body {
   bottom: -30px;
   transition: all 0.3s ease-in-out;
   border-radius: 0 0 18px 18px;
+  visibility: hidden;
+}
+
+.container .avatar .open-share.active {
+  --scale: 0;
+  visibility: visible;
 }
 
 .container .avatar .open-share.clicked {
   height: 80px;
-  overflow: auto;
+  overflow: visible;
 }
 
 .container .avatar .open-share div {
@@ -83,9 +89,10 @@ body {
 .container .avatar .open-share > div:first-child {
   display: flex;
   align-items: center;
-  justify-content: center;
   text-transform: uppercase;
   counter-reset: var(--Grayish-Blue);
+  margin-left: 45px;
+  gap: 18px;
 }
 
 .container .avatar .open-share > div:first-child ul {
@@ -117,10 +124,6 @@ body {
   margin-right: 22px;
 }
 
-.container .avatar .avatar-img #share {
-  cursor: pointer;
-}
-
 @media (min-width: 768px) {
   .container {
     display: grid;
@@ -133,13 +136,36 @@ body {
     border-radius: 18px 0 0 18px;
   }
 
+  .container .avatar .avatar-img #share:hover {
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 8px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+  }
+
   .container .avatar .open-share {
     left: 50%;
-    bottom: 50px;
+    bottom: calc(100% + 28px);
     width: 300px;
     border-radius: 18px;
+    position: absolute;
+    visibility: hidden;
+    transform-origin: bottom;
   }
-  .container .avatar .open-share #remove-share {
+
+  .container .avatar .open-share::after {
+    content: "";
+    background: var(--Very-Dark-Grayish-Blue);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-30%, -60%) rotate(45deg);
+  }
+
+  .container .avatar .open-share div {
     display: none;
   }
 }
@@ -159,5 +185,9 @@ body {
 
   .container .main-image img {
     border-radius: 18px 0 0 18px;
+  }
+
+  .container .avatar .open-share div {
+    display: none;
   }
 }
