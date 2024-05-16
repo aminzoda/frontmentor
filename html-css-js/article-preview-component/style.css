@@ -11,10 +11,6 @@
   box-sizing: border-box;
 }
 
-ul {
-  list-style-type: none;
-}
-
 img {
   max-width: 100%;
 }
@@ -54,7 +50,7 @@ body {
 .container .avatar .open-share {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: var(--Very-Dark-Grayish-Blue);
   color: var(--Desaturated-Dark-Blue);
   position: absolute;
@@ -76,41 +72,38 @@ body {
 .container .avatar .open-share.clicked {
   height: 90px;
   overflow: visible;
-}
 
-.container .avatar .open-share div {
-  padding: 6px 30px;
 }
 
 .container .avatar .open-share #remove-share {
   cursor: pointer;
+  margin-left: 40px;
 }
 
-.container .avatar .open-share > div:first-child {
+.container .avatar .open-share .open_share {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  counter-reset: var(--Grayish-Blue);
-  margin-left: 20px;
-  gap: 16px;
 }
 
-.container .avatar .open-share > div:first-child ul {
+.container .avatar .open-share .open_share > div:first-child {
   display: flex;
+  align-items: center;
 }
 
-.container .avatar .open-share > div:first-child ul li {
+.container .avatar .open-share .open_share > div:first-child a {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 10px;
   width: 30px;
-  height: 30px;
+  height: 30px; 
 }
 
-.container .avatar .open-share > div:first-child ul li:hover {
-  background-color: var(--Desaturated-Dark-Blue);
-  border-radius: 50%;
+.container .avatar .open-share .open_share > div:first-child p {
+  font-size: 1rem;
+  letter-spacing: 1.2px;
 }
 
 .container .avatar {
@@ -215,9 +208,5 @@ body {
 
   .container .main-image img {
     border-radius: 18px 0 0 18px;
-  }
-
-  .container .avatar .open-share div {
-    display: none;
   }
 }

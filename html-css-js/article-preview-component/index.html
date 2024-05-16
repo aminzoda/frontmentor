@@ -27,17 +27,23 @@
         to help you make any room feel complete.</p>
       <div class="avatar">
         <div class="open-share active">
-          <div>
-            <p>Share</p>
-            <ul>
-              <li><img src="images/icon-facebook.svg" alt="" onclick="shareFacebook()"></li>
-              <li><img src="images/icon-twitter.svg" alt="" onclick="shareTwitter()"></li>
-              <li><img src="images/icon-pinterest.svg" alt="" onclick="sharePinterest()"></li>
-            </ul>
-          </div>
+          <div class="open_share">
+            <div>
+              <p>Share</p>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener noreferrer">
+                <img src="images/icon-facebook.svg" alt="" onclick="shareFacebook()">
+              </a>
+              <a href="https://twitter.com/intent/tweet?url=" target="_blank" rel="noopener noreferrer">
+                <img src="images/icon-twitter.svg" alt="" onclick="shareTwitter()">
+              </a>
+              <a href="https://www.pinterest.com/pin/create/button/?url=" target="_blank" rel="noopener noreferrer">
+                <img src="images/icon-pinterest.svg" alt="" onclick="sharePinterest()">
+              </a>
+            </div>
 
-          <div>
-            <img src="images/icon-share.svg" alt="" id="remove-share">
+            <div>
+              <img src="images/icon-share.svg" alt="" id="remove-share">
+            </div>
           </div>
         </div>
         <div class="avatar-img">
@@ -56,7 +62,8 @@
         </div>
       </div>
     </div>
-  </div>  <script src="app.js"></script>
+  </div>
+  <script src="app.js"></script>
 </body>
 
 </html>
