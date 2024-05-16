@@ -59,7 +59,7 @@ body {
   width: calc(100% + 60px);
   left: -30px;
   bottom: -30px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
   border-radius: 0 0 18px 18px;
   visibility: hidden;
 }
@@ -72,12 +72,18 @@ body {
 .container .avatar .open-share.clicked {
   height: 90px;
   overflow: visible;
-
 }
 
 .container .avatar .open-share #remove-share {
   cursor: pointer;
   margin-left: 40px;
+}
+
+.container .avatar .open-share #remove-share:hover {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--Grayish-Blue);
 }
 
 .container .avatar .open-share .open_share {
@@ -98,7 +104,7 @@ body {
   justify-content: center;
   margin: 0 10px;
   width: 30px;
-  height: 30px; 
+  height: 30px;
 }
 
 .container .avatar .open-share .open_share > div:first-child p {
@@ -164,7 +170,7 @@ body {
 
   .container .avatar .open-share {
     left: 50%;
-    bottom: calc(100% + 28px);
+    bottom: calc(100% + 18px);
     width: 300px;
     border-radius: 18px;
     position: absolute;
