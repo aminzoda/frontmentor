@@ -91,8 +91,8 @@ body {
   align-items: center;
   text-transform: uppercase;
   counter-reset: var(--Grayish-Blue);
-  margin-left: 35px;
-  gap: 12px;
+  margin-left: 20px;
+  gap: 16px;
 }
 
 .container .avatar .open-share > div:first-child ul {
@@ -100,7 +100,17 @@ body {
 }
 
 .container .avatar .open-share > div:first-child ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.container .avatar .open-share > div:first-child ul li:hover {
+  background-color: var(--Desaturated-Dark-Blue);
+  border-radius: 50%;
 }
 
 .container .avatar {
