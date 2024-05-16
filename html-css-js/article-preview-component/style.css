@@ -79,13 +79,6 @@ body {
   margin-left: 40px;
 }
 
-.container .avatar .open-share #remove-share:hover {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--Grayish-Blue);
-}
-
 .container .avatar .open-share .open_share {
   display: flex;
   justify-content: space-between;
