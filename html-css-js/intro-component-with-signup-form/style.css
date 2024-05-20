@@ -7,14 +7,14 @@
 }
 
 :root {
-    --Red: hsl(0, 100%, 74%);
-    --Green: hsl(154, 59%, 51%);
-    --Blue: hsl(248, 32%, 49%);
-    --Dark-Blue: hsl(249, 10%, 26%);
-    --Grayish-Blue: hsl(246, 25%, 77%);
-    --Light-Red: hsl(0, 60%, 63%);
-    --font-size: 16px;
-  }
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --Light-Red: hsl(0, 60%, 63%);
+  --font-size: 16px;
+}
 
 .error-text,
 .error-icon {
@@ -27,7 +27,7 @@
 }
 
 .field-group.error input {
-    border: 2px solid var(--Red)
+  border: 2px solid var(--Red);
 }
 
 body {
@@ -82,7 +82,7 @@ body {
 .right-col .top-box {
   background-color: var(--Blue);
   color: white;
-  padding: 15px 90px;
+  padding: 15px 15px;
   border-radius: 10px;
   box-shadow: 0 7px var(--Light-Red, 0.404);
   margin-bottom: 30px;
@@ -140,6 +140,11 @@ body {
 }
 
 .right-col button[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
   cursor: pointer;
   border: none;
   background-color: var(--Green);
@@ -229,4 +234,3 @@ body {
     font-size: 0.7rem;
   }
 }
-
