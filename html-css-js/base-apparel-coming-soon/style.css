@@ -27,7 +27,6 @@ header img {
 }
 
 .container {
-  width: 100%;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -38,15 +37,16 @@ header img {
     hsl(0, 0%, 100%),
     hsl(0, 100%, 98%)
   );
+  width: 100%;
 }
 
-.container .left {
+.left {
   width: 100%;
   height: auto;
   padding: 50px 30px 0 30px;
 }
 
-.container .left h1 {
+.left h1 {
   color: var(--Dark-Grayish-Red);
   font-size: 3.2rem;
   font-weight: 700;
@@ -55,12 +55,12 @@ header img {
   text-transform: uppercase;
 }
 
-.container .left h1 span {
+.left h1 span {
   color: var(--Desaturated-Red);
   font-weight: 200;
 }
 
-.container .left p {
+.left p {
   max-width: 450px;
   color: var(--Desaturated-Red);
   line-height: 1.5rem;
@@ -69,7 +69,7 @@ header img {
   margin-bottom: 40px;
 }
 
-.container .right {
+.right {
   width: 100%;
   height: 250px;
   background-image: url(images/hero-mobile.jpg);
@@ -77,7 +77,7 @@ header img {
   background-position: center center;
 }
 
-.container form {
+form {
   position: relative;
   display: block;
   height: 50px;
@@ -86,7 +86,7 @@ header img {
   margin: 0 auto;
 }
 
-.container form input {
+form input {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -101,7 +101,7 @@ header img {
   font-size: 1.1rem;
 }
 
-.container form button {
+form button {
   cursor: pointer;
   position: absolute;
   right: 0;
@@ -116,7 +116,7 @@ header img {
   box-shadow: 0px 0px 10px 1px var(--Desaturated-Red, 0.41);
 }
 
-.container form button:hover {
+form button:hover {
   background-image: linear-gradient(
     135deg,
     hsl(0, 80%, 86%),
@@ -125,12 +125,12 @@ header img {
   box-shadow: 0px 0px 13px 2px #f4aaabbf;
 }
 
-.container form input::placeholder {
+form input::placeholder {
   color: var(--Desaturated-Red);
   opacity: 0.8;
 }
 
-.container form .error-icon {
+form .error-icon {
   display: inline-block;
   position: absolute;
   top: 24%;
@@ -138,7 +138,7 @@ header img {
   display: none;
 }
 
-.container form .error-text {
+form .error-text {
   position: absolute;
   left: 30px;
   top: 40px;
@@ -146,15 +146,15 @@ header img {
   display: none;
 }
 
-.container form.error .error-icon {
+form.error .error-icon {
   display: block;
 }
 
-.container form.error .error-text {
+form.error .error-text {
   display: block;
 }
 
-.container form.error input {
+form.error input {
   border: 2px solid var(--Soft-Red);
 }
 
@@ -174,13 +174,13 @@ header img {
     padding-bottom: 0;
   }
 
-  .container .right {
+  .right {
     width: 80%;
     height: 100vh;
     background-image: url(images/hero-desktop.jpg);
   }
 
-  .container .left {
+  .left {
     height: 100vh;
     width: 100%;
     padding-top: 28vh;
@@ -191,12 +191,12 @@ header img {
     background-size: cover;
   }
 
-  .container .left h1 {
+  .left h1 {
     font-size: 5rem;
     line-height: 5.5rem;
   }
 
-  .container .left p {
+  .left p {
     margin-left: 0;
     font-size: 1.1rem;
   }
@@ -205,7 +205,7 @@ header img {
     margin-left: 0;
   }
 
-  .container form button {
+  form button {
     width: 80px;
   }
 }
