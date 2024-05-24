@@ -1,13 +1,13 @@
-const socials = document.querySelector(".open-share");
-const shareBtn = document.getElementById("share");
-const removeShareBtn = document.getElementById("remove-share");
+document.addEventListener("DOMContentLoaded", () => {
+  const shareMenu = document.getElementById("share-menu");
+  const shareBtn = document.getElementById("share-btn");
+  const removeShareBtn = document.getElementById("share-btn");
 
-shareBtn.addEventListener("click", () => {
-  socials.classList.toggle("clicked");
+  shareBtn.addEventListener("click", () => {
+    console.log("Share button clicked");
+    shareMenu.classList.toggle("open");
+  });
+  removeShareBtn.addEventListener("click", () => {
+    shareMenu.classList.remove("close");
+  });
 });
-
-removeShareBtn.addEventListener("click", () => {
-  socials.classList.remove("clicked");
-});
-
-

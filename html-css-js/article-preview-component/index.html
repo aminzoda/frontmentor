@@ -1,69 +1,62 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <title>Article preview component</title>
+  <title>Article Preview Component</title>
 </head>
 
 <body>
   <div class="container">
-    <div class="main-image">
-      <img src="images/drawers.jpg" alt="">
-    </div>
-    <div class="description">
-      <h2>Shift the overall look and feel by adding these wonderful
-        touches to furniture in your home</h2>
-      <p style="padding-bottom: 30px">Ever been in a room and felt like something was missing? Perhaps
-        it felt slightly bare and uninviting. I’ve got some simple tips
-        to help you make any room feel complete.</p>
-      <div class="avatar">
-        <div class="open-share active">
-          <div class="open_share">
-            <div>
-              <p>Share</p>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener noreferrer">
-                <img src="images/icon-facebook.svg" alt="" onclick="shareFacebook()">
-              </a>
-              <a href="https://twitter.com/intent/tweet?url=" target="_blank" rel="noopener noreferrer">
-                <img src="images/icon-twitter.svg" alt="" onclick="shareTwitter()">
-              </a>
-              <a href="https://www.pinterest.com/pin/create/button/?url=" target="_blank" rel="noopener noreferrer">
-                <img src="images/icon-pinterest.svg" alt="" onclick="sharePinterest()">
-              </a>
-            </div>
-
-            <div>
-              <img src="images/icon-share.svg" alt="" id="remove-share">
-            </div>
-          </div>
-        </div>
-        <div class="avatar-img">
-          <div class="avatar-text">
-            <img src="images/avatar-michelle.jpg " alt="">
-            <div>
-              <h4>Michello Appleton</h4>
+    <main class="main-content">
+      <figure class="main-image">
+        <img src="images/drawers.jpg" alt="Drawers">
+      </figure>
+      <section class="description">
+        <h2>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
+        <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting.
+          I’ve got some simple tips to help you make any room feel complete.</p>
+        <div class="author-info">
+          <figure class="author-avatar">
+            <img src="images/avatar-michelle.jpg" alt="Michelle Appleton" class="avatar-photo">
+            <figcaption>
+              <h4>Michelle Appleton</h4>
               <p>28 Jun 2028</p>
+            </figcaption>
+          </figure>
+          <div class="share-btn-container">
+            <button id="share-btn" class="share-btn">
+              <img src="images/icon-share.svg" alt="Share">
+            </button>
+            <div class="share-menu" id="share-menu">
+              <div class="share-content">
+                <p>Share</p>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener noreferrer">
+                  <img src="images/icon-facebook.svg" alt="Facebook" class="share-icon">
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=" target="_blank" rel="noopener noreferrer">
+                  <img src="images/icon-twitter.svg" alt="Twitter" class="share-icon">
+                </a>
+                <a href="https://www.pinterest.com/pin/create/button/?url=" target="_blank" rel="noopener noreferrer">
+                  <img src="images/icon-pinterest.svg" alt="Pinterest" class="share-icon">
+                </a>
+                <button id="share-btn" class="share-btn">
+                  <img src="images/icon-share.svg" alt="Share">
+                </button>
+              </div>
             </div>
           </div>
-          <div>
-            <p>
-              <img src="images/icon-share.svg" alt="" id="share">
-            </p>
-          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </div>
   <script src="app.js"></script>
+
+
+
 </body>
 
 </html>
