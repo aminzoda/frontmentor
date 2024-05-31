@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const unread = document.getElementById("notifications");
   const markAll = document.getElementById("mark_all");
 
-  unread.innerText = unReadMessages.lenght;
+  unread.innerText = unReadMessages.length;
 
   unReadMessages.forEach((message) => {
     message.addEventListener("click", () => {
@@ -21,3 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
     unread.innerText = newUnreadMessages.length;
   });
 });
+
+

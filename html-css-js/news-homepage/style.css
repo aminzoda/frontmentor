@@ -54,16 +54,19 @@ body {
   right: 1.25rem;
   z-index: 99999;
   cursor: pointer;
+  
 }
 
 .header nav {
   opacity: 0;
-  z-index: -999;
+  z-index: -1;
   transition: all 0.3s ease-in-out;
 }
 
 .header nav.open {
-  position: fixed;
+  transform: translateX(0);
+  transform: translateY(0);
+  position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
@@ -71,7 +74,7 @@ body {
   background-color: white;
   padding: 1.25rem;
   opacity: 1;
-  z-index: 9999999999;
+  z-index: 99999;
 }
 
 .header nav ul {
@@ -215,7 +218,7 @@ body {
   }
 
   .header nav.open {
-    position: relative;
+    position: absolute;
     width: auto;
     background-color: transparent;
     padding: 0;
