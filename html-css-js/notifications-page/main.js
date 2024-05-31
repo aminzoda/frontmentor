@@ -21,5 +21,3 @@ document.addEventListener("DOMContentLoaded", () => {
     unread.innerText = newUnreadMessages.length;
   });
 });
-
-
