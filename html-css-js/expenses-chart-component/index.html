@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Expenses chart component</title>
+</head>
+
+<body>
+  <div class="chart">
+    <div class="chart--header">
+
+      <div class="chart-text">
+        <h5>My balance</h5>
+        <h1>$921.48</h1>
+      </div>
+
+      <div>
+        <img src="images/logo.svg" alt="">
+      </div>
+
+    </div>
+
+    <div class="chart--body">
+      <h1>Spending - Last 7 days</h1>
+
+      <div class="chart--bar">
+
+        <div class="bar">
+          <div>
+            <div class="tooltip" id="one">$17.25</div>
+          </div>
+          <div>
+            <div class="tooltip" id="two">$34.91</div>
+          </div>
+          <div>
+            <div class="tooltip" id="three">$52.36</div>
+          </div>
+          <div>
+            <div class="tooltip" id="four">$31.07</div>
+          </div>
+          <div>
+            <div class="tooltip" id="five">$23.39</div>
+          </div>
+          <div>
+            <div class="tooltip" id="six">$48.28</div>
+          </div>
+          <div>
+            <div class="tooltip" id="seven">$25.48</div>
+          </div>
+        </div>
+
+        <div class="labels">
+          <p>mon</p>
+          <p>tue</p>
+          <p>wed</p>
+          <p>thu</p>
+          <p>fri</p>
+          <p>sat</p>
+          <p>sun</p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="total--container">
+
+        <div class="total">
+          <h5>Total this month</h5>
+          <h1>$478.33</h1>
+        </div>
+
+        <div class="month">
+          <h5>+2.4%</h5>
+          <h5>from last month</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
