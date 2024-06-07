@@ -1,0 +1,26 @@
+.chart-value.active:hover {
+  background-color: hsl(187, 49%, 80%);
+}
+
+.chart-value:hover {
+  background-color: hsl(10, 100%, 76%);
+}
+
+
+.tooltip {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60px !important;
+  height: auto !important;
+  background-color: var(--dark-brown) !important;
+  border-radius: 4px;
+  padding: 4px;
+  color: #fff;
+}
+
+.tooltip.active {
+  display: block;
+}

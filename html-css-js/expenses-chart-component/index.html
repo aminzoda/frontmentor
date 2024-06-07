@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chart.css">
   <title>Expenses chart component</title>
 </head>
 
@@ -29,42 +30,8 @@
     <div class="chart--body">
       <h1>Spending - Last 7 days</h1>
 
-      <div class="chart--bar">
-
-        <div class="bar">
-          <div>
-            <div class="tooltip" id="one">$17.25</div>
-          </div>
-          <div>
-            <div class="tooltip" id="two">$34.91</div>
-          </div>
-          <div>
-            <div class="tooltip" id="three">$52.36</div>
-          </div>
-          <div>
-            <div class="tooltip" id="four">$31.07</div>
-          </div>
-          <div>
-            <div class="tooltip" id="five">$23.39</div>
-          </div>
-          <div>
-            <div class="tooltip" id="six">$48.28</div>
-          </div>
-          <div>
-            <div class="tooltip" id="seven">$25.48</div>
-          </div>
-        </div>
-
-        <div class="labels">
-          <p>mon</p>
-          <p>tue</p>
-          <p>wed</p>
-          <p>thu</p>
-          <p>fri</p>
-          <p>sat</p>
-          <p>sun</p>
-        </div>
-      </div>
+      <div class="chart--bar"></div>
+      <div class="tooltip" id="tooltip"></div>
 
       <hr />
 
@@ -82,6 +49,7 @@
       </div>
     </div>
   </div>
+  <script src="main.js"></script>
 </body>
 
 </html>

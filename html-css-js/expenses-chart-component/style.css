@@ -8,6 +8,8 @@
   --medium-brown: hsl(28, 10%, 53%);
   --cream: hsl(27, 66%, 92%);
   --very-pale-orange: hsl(33, 100%, 98%);
+  --clr-small: hsl(28, 10%, 53%);
+  --height: (52.36/4) em;
 }
 
 * {
@@ -33,26 +35,32 @@ body {
 .chart {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+  gap: 1rem;
 }
 
 .chart--header,
 .chart--body {
   display: flex;
-  padding: 30px;
-  border-radius: 20px;
-  width: 540px;
+  width: 750px;
+  padding: 28px;
+  border-radius: 1rem;
+  width: 28rem;
 }
 
 .chart--header {
-  background-color: var(--soft-red);
+  width: 540px;
   height: 128px;
+  background-color: var(--soft-red);
   justify-content: space-between;
   align-items: center;
   color: #fff;
 }
 
 .chart--body {
+  width: 540px;
   flex-direction: column;
   background: #fff;
   gap: 35px;
@@ -69,6 +77,12 @@ hr {
   align-items: center;
 }
 
+.total h5 {
+  color: var(--medium-brown);
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .month {
   text-align: right;
 }
@@ -80,156 +94,38 @@ hr {
 .month h5:last-child {
   color: var(--medium-brown);
   font-size: 18px;
-  font-weight: 500;
-
-}
-
-.total h5 {
-  color: var(--medium-brown);
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 400;
 }
 
 .chart--bar {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 30px;
-}
-
-.bar {
-  display: flex;
-  gap: 20px;
   justify-content: space-between;
+}
+
+.chart-wrapper {
+  width: 3rem;
+  display: flex;
   align-items: flex-end;
+  height: 90%;
 }
 
-.bar div {
-  position: relative;
-  width: 50px;
-  border-radius: 5px;
+.chart-value {
+  height: var(--height);
   background: var(--soft-red);
-  cursor: pointer;
-  transition: 0.2s ease-in;
+  width: 100%;
+  border-radius: 0.25rem;
 }
 
-.bar div:hover {
-  background-color: hsl(10, 100%, 76%);
-}
-
-.bar div:nth-child(1) {
-  height: 50px;
-}
-
-.bar div:nth-child(1):hover #one {
-  display: block;
-}
-
-.bar div:nth-child(2) {
-  height: 100px;
-}
-
-.bar div:nth-child(2):hover #two {
-  display: block;
-}
-
-.bar div:nth-child(3) {
-  height: 150px;
+.chart-value.active {
   background-color: var(--cyan);
 }
 
-.bar div:nth-child(3):hover {
-  background-color: hsl(187, 49%, 80%);
+
+.chart-title {
+  color: var(--clr-small);
+  font-size: 1rem;
 }
 
-.bar div:nth-child(3):hover #three {
-  display: block;
-}
-
-.bar div:nth-child(4) {
-  height: 89px;
-}
-
-.bar div:nth-child(4):hover #four {
-  display: block;
-}
-
-.bar div:nth-child(5) {
-  height: 60px;
-}
-
-.bar div:nth-child(5):hover #five {
-  display: block;
-}
-
-.bar div:nth-child(6) {
-  height: 122px;
-}
-
-.bar div:nth-child(6):hover #six {
-  display: block;
-}
-
-.bar div:nth-child(7) {
-  height: 70px;
-}
-
-.bar div:nth-child(7):hover #seven {
-  display: block;
-}
-
-.labels {
-  display: flex;
-  align-items: center;
-  color: var(--medium-brown);
-  justify-content: space-between;
-  padding: 0 10px 0 10px;
-}
-
-.labels p {
-  align-content: center;
-}
-
-.tooltip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px !important;
-  height: auto !important;
-  background-color: var(--dark-brown) !important;
-  border-radius: 4px;
-  padding: 5px;
-  color: #fff;
-  top: -40px;
-  margin-left: -5px;
-}
-
-#one {
-  display: none;
-}
-
-#two {
-  display: none;
-}
-#three {
-  display: none;
-}
-
-#four {
-  display: none;
-}
-
-#five {
-  display: none;
-}
-
-#six {
-  display: none;
-}
-
-#seven {
-  display: none;
-}
 
 @media screen and (max-width: 678px) {
   .chart--header,
@@ -239,11 +135,8 @@ hr {
     width: 380px;
   }
 
-  .chart--body h1{
+  .chart--body h1 {
     font-size: 1.8rem;
   }
 
-  .bar {
-    gap: 12px;  
-  }
 }
