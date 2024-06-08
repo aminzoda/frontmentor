@@ -1,29 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Intro section with dropdown navigation</title>
 </head>
+
 <body>
+  <nav>
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="nav-logo">
+          <img src="images/logo.svg" alt="" style="margin-top: 12px;">
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Features</a>
+            <img src="images/icon-arrow-down.svg" alt="arrow down" class="arrow">
+            <div class="sub-menu one">
+              <p class="sub-link">
+                <img src="images/icon-todo.svg" alt="icon" /> Todo list
+              </p>
+              <p class="sub-link">
+                <img src="images/icon-calendar.svg" alt="icon" /> Calendar
+              </p>
+              <p class="sub-link">
+                <img src="images/icon-reminders.svg" alt="icon" /> Reminders
+              </p>
+              <p class="sub-link">
+                <img src="images/icon-planning.svg" alt="icon" /> Planing
+              </p>
+            </div>
+          </li>
+          <li>
+            Company
 
-  Features
-  Company
-  Careers
-  About
+            <img src="images/icon-arrow-down.svg" alt="">
+            <div class="sub-menu two">
+              <p class="cub-link">History</p>
+              <p class="cub-link">Our Team</p>
+              <p class="cub-link">Blog</p>
+            </div>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </div>
+      <div class="mobile-menu-btn">
+        <img src="images/icon-menu.svg" alt="">
+      </div>
+      <div class="mobile-menu">
+        <ul class="mobile-links">
+          <li>
+            <p>
+              Features
+              <img src="images/icon-arrow-down.svg" alt="arrow down" class="arrow" />
+            </p>
+            <div class="mobile-sub">
+              <p class="sub-link">
+                <img src="images/icon-todo.svg" alt="icon" /> Todo List
+              </p>
+              <p class="sub-link">
+                <img src="images/icon-calendar.svg" alt="icon" /> Calendar
+              </p>
+              <p class="sub-link">
+                <img src="images/icon-reminders.svg" alt="icon" /> Reminders
+              </p>
+              <p class="sub-link">
+                <img src="images/icon-planning.svg" alt="icon" /> Planing
+              </p>
+            </div>
+          </li>
+          <li>
+            <p>
+              Company
+              <img src="images/icon-arrow-down.svg" alt="arrow down" class="arrow" />
+            </p>
 
-  Login
-  Register
+            <div class="mobile-sub">
+              <p class="cub-link">History</p>
+              <p class="cub-link">Our Team</p>
+              <p class="cub-link">Blog</p>
+            </div>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <button class="transparent-btn">Login</button>
+        <button class="outlined-btn">Register</button>
+      </div>
+    </div>
+  </nav>
 
-  Make remote work
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+  <!-- !Main-content -->
 
-  Learn more
-
+  <main>
+    <div class="main-container">
+      <div class="main-left">
+        <h1 class="main-heading">
+          Make <br />
+          remote work
+        </h1>
+        <p class="main-content">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <div class="primary-btn">Learn more</div>
+        <div class="logoes">
+          <img src="images/client-databiz.svg" alt="brand-logo" />
+          <img src="images/client-audiophile.svg" alt="brand-logo" />
+          <img src="images/client-meet.svg" alt="brand-logo" />
+          <img src="images/client-maker.svg" alt="brand-logo" />
+        </div>
+      </div>
+      <div class="main-right">
+        <picture>
+          <source media="(max-width: 800px)" srcset="images/image-hero-mobile.png" />
+          <img src="images/image-hero-desktop.png" alt="Flowers">
+        </picture>
+      </div>
+    </div>
+  </main>
+  <div class="overflow"></div>
+<script src="main.js"></script>
 </body>
+
 </html>

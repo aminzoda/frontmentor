@@ -1,52 +1,51 @@
-const dataPromise = fetch("data.json")
-  .then((response) => response.json())
-  .catch((error) => console.log(error));
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            const chartBar = document.querySelector('.chart--bar');
+            const tooltip = document.getElementById('tooltip');
+            const maxAmount = Math.max(...data.map(item => item.amount));
+            const currentDate = new Date();
+            const currentDayIndex = currentDate.getDay() - 1; // getDay() returns 0 for Sunday
 
-let chartBar = document.querySelector(".chart--bar");
-let tooltip = document.getElementById("tooltip");
+            data.forEach((item, index) => {
+                const chart = document.createElement('div');
+                chart.classList.add('chart');
+                const height = item.amount / maxAmount * 100;
+                const value = `<div class="chart-value ${index === currentDayIndex ? 'active' : ''}" style="height:${height}%"></div>`;
 
-dataPromise.then((data) => {
-  data.forEach((item) => {
-    let chart = document.createElement("div");
-    chart.classList.add("chart");
-    const height = item.amount / 0.4;
-    let value = "";
-    if (item.day == "wed") {
-      value = `<div class="chart-value active" style="--height:${height}px"></div>`;
-    } else {
-      value = `<div class="chart-value" style="--height:${height}px"></div>`;
-    }
+                chart.innerHTML = `
+                  <div class="chart-wrapper">
+                    ${value}
+                  </div>
+                  <div class="chart-title">${item.day}</div>
+                `;
 
-    chart.innerHTML = `
-      <div class="chart-wrapper">
-        ${value}
-      </div>
-      <div class="chart-title">${item.day}</div>
-    `;
+                chartBar.appendChild(chart);
 
-    chartBar.appendChild(chart);
+                // Add event listener for hover
+                chart.addEventListener('mouseenter', createChartHoverListener(item));
+                chart.addEventListener('mouseleave', () => tooltip.classList.remove('active'));
+            });
 
-    // Add event listener for click
-    chart.addEventListener("click", createChartClickListener(item));
-  });
-});
+            function createChartHoverListener(item) {
+                return (event) => {
+                    const chartValueElement = event.currentTarget.querySelector('.chart-value');
+                    const rect = chartValueElement.getBoundingClientRect();
+                    const tooltipText = `$${item.amount}`;
+                    tooltip.innerHTML = tooltipText;
 
-function createChartClickListener(item) {
-  return (event) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const tooltipText = `$${item.amount}`;
-    tooltip.innerHTML = tooltipText;
-    tooltip.style.top = `${rect.top - tooltip.offsetHeight - 2}px`;
-    tooltip.style.left = `${
-      rect.left + rect.width / 2 - tooltip.offsetWidth / 2
-    }px`;
-    tooltip.classList.add("active");
-  };
-}
+                    // Temporarily make the tooltip visible to calculate its width
+                    tooltip.classList.add('active');
+                    const tooltipWidth = tooltip.offsetWidth;
+                    const tooltipHeight = tooltip.offsetHeight;
+                    tooltip.classList.remove('active');
 
-// Hide the tooltip when clicking anywhere outside the bars
-document.addEventListener("click", (event) => {
-  if (!event.target.closest(".chart")) {
-    tooltip.classList.remove("active");
-  }
+                    tooltip.style.top = `${rect.top - tooltipHeight - 8}px`; // 1rem above the bar
+                    tooltip.style.left = `${rect.left + rect.width / 2 - tooltipWidth / 2}px`;
+                    tooltip.classList.add('active');
+                };
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
 });

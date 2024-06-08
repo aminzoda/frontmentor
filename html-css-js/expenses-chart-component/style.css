@@ -9,7 +9,6 @@
   --cream: hsl(27, 66%, 92%);
   --very-pale-orange: hsl(33, 100%, 98%);
   --clr-small: hsl(28, 10%, 53%);
-  --height: (52.36/4) em;
 }
 
 * {
@@ -37,21 +36,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 12rem;
   gap: 1rem;
+  height: 100%;
 }
 
 .chart--header,
 .chart--body {
   display: flex;
-  width: 750px;
+  width: 100%;
+  max-width: 750px;
   padding: 28px;
   border-radius: 1rem;
-  width: 28rem;
 }
 
 .chart--header {
-  width: 540px;
   height: 128px;
   background-color: var(--soft-red);
   justify-content: space-between;
@@ -60,7 +58,6 @@ body {
 }
 
 .chart--body {
-  width: 540px;
   flex-direction: column;
   background: #fff;
   gap: 35px;
@@ -97,36 +94,6 @@ hr {
   font-weight: 400;
 }
 
-.chart--bar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.chart-wrapper {
-  width: 3rem;
-  display: flex;
-  align-items: flex-end;
-  height: 90%;
-}
-
-.chart-value {
-  height: var(--height);
-  background: var(--soft-red);
-  width: 100%;
-  border-radius: 0.25rem;
-}
-
-.chart-value.active {
-  background-color: var(--cyan);
-}
-
-
-.chart-title {
-  color: var(--clr-small);
-  font-size: 1rem;
-}
-
-
 @media screen and (max-width: 678px) {
   .chart--header,
   .chart--body {
@@ -139,4 +106,5 @@ hr {
     font-size: 1.8rem;
   }
 
+ 
 }
