@@ -318,10 +318,10 @@ main {
 @media screen and (max-width: 500px) {
   .main-left {
     margin-top: 1rem;
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
 
   .main-heading {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 }
