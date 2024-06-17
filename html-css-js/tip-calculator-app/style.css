@@ -1,0 +1,201 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  font-family: "Space Mono", monospace;
+  color: var(--very-dark-cyan);
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Space Mono", monospace;
+  padding: 48px 0 0;
+  background-color: var(--light-grayish-cyan);
+}
+
+.logo-img {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  padding: 40px 24px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.bill-input-wrapper label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.input-with-image {
+  position: relative;
+}
+
+.input-with-image input {
+  width: calc(100% - 40px);
+  border: none;
+  background-color: var(--very-light-grayish-cyan);
+  height: 46px;
+  line-height: 46px;
+  font-size: 24px;
+  text-align: right;
+  padding: 0 20px;
+  margin-bottom: 38px;
+  border-radius: 5px;
+}
+
+.input-with-image img {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bill-input-wrapper label,
+.select-tip-title,
+.number-of-people-wrapper .title {
+  color: var(--dark-grayish-cyan);
+}
+
+.select-tip-title {
+  margin-bottom: 20px;
+}
+
+.select-tip-inner-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px;
+  row-gap: 16px;
+}
+
+.select-tip-percentage {
+  background-color: var(--very-dark-cyan);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--white);
+  padding: 6px 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.select-tip-percentage.active {
+  color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
+}
+
+.select-tip-custom {
+  padding: 0;
+}
+
+.select-tip-custom input {
+  width: 100%;
+  border-radius: 8px;
+  height: 48px;
+  border: none;
+  line-height: 48px;
+  font-size: 24px;
+  text-align: center;
+  background-color: var(--very-light-grayish-cyan);
+}
+
+.select-tip-wrapper {
+  margin-bottom: 40px;
+}
+
+.number-of-people-wrapper .title {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.card-footer {
+  padding: 45px 24px 24px;
+  background-color: var(--very-dark-cyan);
+  border-radius: 20px;
+}
+
+.footer-section {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section .title {
+  color: var(--white);
+  text-align-last: left;
+}
+
+.footer-section .sub-title {
+  text-align: left;
+  color: var(--dark-grayish-cyan);
+}
+
+.footer-section .value {
+  color: var(--strong-cyan);
+  font-size: 32px;
+}
+
+.card-footer .btn-reset {
+  text-transform: uppercase;
+  background-color: var(--strong-cyan);
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 921px) {
+  .card {
+    max-width: 910px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 238px;
+    padding: 30px 30px;
+  }
+
+  .card-header,
+  .card-footer {
+    width: 50%;
+  }
+
+  .select-tip-inner-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .btn-reset {
+    margin-top: 154px;
+  }
+
+  .logo-img {
+    margin-bottom: 90px;
+  }
+
+  .footer-section .value {
+    font-size: 38px;
+  }
+}
