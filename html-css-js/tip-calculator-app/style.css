@@ -184,7 +184,7 @@ body {
   }
 
   .input-with-image input {
-    width: calc(100% - 40px);
+    width: 100%;
     border: none;
     background-color: var(--very-light-grayish-cyan);
     height: 46px;
