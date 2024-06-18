@@ -102,8 +102,6 @@ body {
 }
 
 .regular-card {
-  /* border: 1px solid red; */
-
   width: 100%;
   border-radius: 1rem;
   background-repeat: no-repeat;
@@ -113,7 +111,7 @@ body {
     position: relative;
     background-color: var(--dark-blue);
     margin-top: 3rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     padding: 2.1rem;
 
     display: flex;
@@ -127,7 +125,6 @@ body {
     }
 
     .row {
-      /* border: 1px solid white; */
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -159,7 +156,6 @@ body {
           top: 0;
           right: 0;
           bottom: 0;
-          /* opacity: 0.5; */
           border-radius: 1rem;
           display: none;
           z-index: 1;

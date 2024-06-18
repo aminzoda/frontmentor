@@ -4,72 +4,67 @@ document.addEventListener("DOMContentLoaded", () => {
   const numberOfPeopleInput = document.getElementById("number-of-people-input");
   const tipAmountValue = document.querySelector(".tip-amount-value");
   const totalValue = document.querySelector(".total-value");
-  const btnReset = document.querySelector(".btn-reset"); // Corrected class name
+  const btnReset = document.querySelector(".btn-reset");
   const selectTipBtns = document.querySelectorAll(".select-tip-percentage");
 
-  btnReset.addEventListener("click", (event) => {
-    // Reset the inputs and value
-    billInput.value = "0";
+  const INITIAL_BILL = "0";
+  const INITIAL_PEOPLE = "1";
+  const INITIAL_TIP = 15;
+
+  const resetInputs = () => {
+    billInput.value = INITIAL_BILL;
     customTipInput.value = "";
-    numberOfPeopleInput.value = "1"; // Assuming "1" is the intended default value
+    numberOfPeopleInput.value = INITIAL_PEOPLE;
     tipAmountValue.innerHTML = "$0";
     totalValue.innerHTML = "$0";
+    resetTipButtons();
+    setDefaultTip();
+  };
 
-    // Reset the tip percentage btns
-    selectTipBtns.forEach((tipBtn) => {
-      tipBtn.classList.remove("active");
-    });
+  const resetTipButtons = () => {
+    selectTipBtns.forEach(btn => btn.classList.remove("active"));
+  };
 
-    // Set 15% as the default tip percentage
-    selectTipBtns[2].classList.add("active");
-  });
-
-  // Make the tip percentage btns clickable
-  selectTipBtns.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      selectTipBtns.forEach((tipBtn) => {
-        tipBtn.classList.remove("active");
-      });
-
-      if (event.target.classList.contains("custom-tip-input")) {
-        event.target.parentElement.classList.add("active");
-      } else {
-        event.target.classList.add("active");
+  const setDefaultTip = () => {
+    selectTipBtns.forEach(btn => {
+      if (parseInt(btn.dataset.percentage) === INITIAL_TIP) {
+        btn.classList.add("active");
       }
-
-      calculateTip();
     });
-  });
+  };
 
   const calculateTip = () => {
-    const billValue = parseFloat(billInput.value);
-    const numberOfPeople = parseFloat(numberOfPeopleInput.value);
-    const customTipActive = document.querySelector(".select-tip-custom.active");
-    let tipPercentage = parseInt(
-      document.querySelector(".select-tip-percentage.active").dataset.percentage
-    );
+    const billValue = parseFloat(billInput.value) || 0;
+    const numberOfPeople = parseFloat(numberOfPeopleInput.value) || 1;
+    const activeTipBtn = document.querySelector(".select-tip-percentage.active");
+    let tipPercentage = activeTipBtn ? parseFloat(activeTipBtn.dataset.percentage) : parseFloat(customTipInput.value) || 0;
 
-    if (customTipActive) {
-      tipPercentage = parseFloat(
-        document.querySelector(".custom-tip-input").value
-      );
-    }
-    const totalAmount = parseFloat((tipPercentage / 100) * billValue).toFixed(
-      2
-    );
-    const tipAmount = parseFloat(totalAmount / numberOfPeople);
+    const totalAmount = ((billValue * tipPercentage) / 100).toFixed(2);
+    const tipAmount = (totalAmount / numberOfPeople).toFixed(2);
 
     tipAmountValue.innerHTML = `$${tipAmount}`;
     totalValue.innerHTML = `$${totalAmount}`;
   };
 
-  billInput.addEventListener("keyup", (event) => {
+  const activateTipButton = event => {
+    resetTipButtons();
+    const target = event.target.closest(".select-tip-percentage");
+    if (target) target.classList.add("active");
     calculateTip();
-  });
-  customTipInput.addEventListener("keyup", (event) => {
+  };
+
+  const setupEventListeners = () => {
+    btnReset.addEventListener("click", resetInputs);
+    selectTipBtns.forEach(btn => btn.addEventListener("click", activateTipButton));
+    [billInput, customTipInput, numberOfPeopleInput].forEach(input => input.addEventListener("input", calculateTip));
+  };
+
+  // Initialize
+  const init = () => {
+    resetInputs();
     calculateTip();
-  });
-  numberOfPeopleInput.addEventListener("keyup", (event) => {
-    calculateTip();
-  });
+    setupEventListeners();
+  };
+
+  init();
 });
