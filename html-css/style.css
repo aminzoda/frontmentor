@@ -1,5 +1,17 @@
+
+
 :root {
   --slate-blue: rgb(106, 190, 205);
+  --white: rgb(255, 255, 255);
+  --gainsboro: rgb(219, 229, 230);
+  --dark-blue: rgb(62, 84, 163);
+  --gray-white: rgb(231, 235, 249);
+  --yellow: rgb(170, 215, 66);
+  --dark-yellow: rgb(241, 182, 4);
+  --pantone: rgb(128, 141, 153);
+  --dark-pantone: rgb(115, 115, 115);
+
+   --slate-blue: rgb(106, 190, 205);
   --white: rgb(255, 255, 255);
   --gainsboro: rgb(219, 229, 230);
   --dark-blue: rgb(62, 84, 163);
@@ -25,6 +37,7 @@ img {
 }
 
 body {
+  background-color: var(--gainsboro);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -37,8 +50,9 @@ body {
 
 .name-menu {
   display: flex;
-  margin-left: 6rem;
-  padding: 18px 0;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  flex-direction: row-reverse;
 }
 
 button {
@@ -47,9 +61,8 @@ button {
 }
 
 .heading-wrapper {
-  margin-left: 6px;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -326,14 +339,19 @@ footer {
 }
 
 footer h1 {
-  margin-left: 80px;
-  padding-top: 40px;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--gray-white);
+
 }
 
 .row-footer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 50px 80px;
 }
 
@@ -351,17 +369,16 @@ footer h1 {
   padding: 0.5rem;
 }
 
+
+
 .iconed-text img {
-  width: 30px;
+  width: 20px;
 }
 
 .icon-row svg {
-  border: 1px solid var(--dark-pantone);
-  border-radius: 50%;
-  padding: 0.3rem;
-  height: 34px;
-  width: 34px;
-  margin-right: 0.3rem;
+  height: 30px;
+  width: 30px;
+  color: var(--gray-white);
 }
 
 .footer-link {
@@ -398,3 +415,4 @@ footer h1 {
     gap: 22px;
   }
 }
+
