@@ -18,9 +18,8 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   min-height: 100vh;
-  background-color: hsl(240, 78%, 98%);
-  background-image: url(https://digitshack.com/codepen/mentor9/bg-top.svg),
-    url(https://digitshack.com/codepen/mentor9/bg-bottom.svg);
+  background-color: var(--very-light-grayish-blue);
+  background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
   background-repeat: no-repeat;
   background-position: right top, left bottom;
 }
