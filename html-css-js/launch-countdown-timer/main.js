@@ -1,8 +1,16 @@
 const countdown = () => {
-  const endDate = new Date("December 31, 2024 23:59:59").getTime();
+  const endDate = new Date("jule 22, 2024 00:00:00").getTime();
   const now = new Date().getTime();
 
   const difference = endDate - now;
+
+  if (difference < 0) {
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+    return;
+  }
 
   const seconds = 1000;
   const minutes = seconds * 60;
@@ -24,4 +32,5 @@ const countdown = () => {
   document.getElementById("seconds").innerHTML = timeSeconds;
 };
 
+countdown(); // Initialize the countdown immediately
 setInterval(countdown, 1000);
