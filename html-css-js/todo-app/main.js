@@ -43,37 +43,38 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Function to create a new to-do item
-  function createNewTodoItem(text) {
+  function createNewTodoItem(text, priority = "medium", isChecked = false) {
     const elem = document.createElement("li");
     elem.classList.add("flex-row");
 
     elem.innerHTML = `
-       <label class="list-item">
-        <input type="checkbox" name="todoItem" ${isChecked ? "checked" : ""}>
-        <span class="checkmark"></span>
-        <span class="text">${text}</span>
-        <select class="priority">
-          <option value="low" ${priority === "low" ? "selected" : ""}>Low</option>
-          <option value="medium" ${priority === "medium" ? "selected" : ""}>Medium</option>
-          <option value="high" ${priority === "high" ? "selected" : ""}>High</option>
-        </select>
-        <button class="edit">Edit</button>
-      </label>
-      <span class="remove"></span>
+    <label class="list-item">
+      <input type="checkbox" name="todoItem" ${isChecked ? "checked" : ""}>
+      <span class="checkmark"></span>
+      <span class="text">${text}</span>
+      <select class="priority">
+        <option value="low" ${priority === "low" ? "selected" : ""}>Low</option>
+        <option value="medium" ${priority === "medium" ? "selected" : ""}>Medium</option>
+        <option value="high" ${priority === "high" ? "selected" : ""}>High</option>
+      </select>
+      <button class="edit">Edit</button>
+    </label>
+    <span class="remove"></span>
       `;
 
      // Hide the item if the completed filter is selected
-    if (
-      document.querySelector('.filter input[type="radio"]:checked').id === "completed") {
-      elem.classList.add("hidden");
-    }
-
-    todoList.append(elem);
-    updateItemsCount(1);
-
-  // Save tasks to localStorage
-    saveTasks();
+  
+  if (document.querySelector('.filter input[type="radio"]:checked').id === "completed") {
+    elem.classList.add("hidden");
   }
+
+  todoList.append(elem);
+  updateItemsCount(1);
+
+ // Save tasks to localStorage
+  saveTasks();
+}
+
 
   // Update the count of items left
   function updateItemsCount(number) {
