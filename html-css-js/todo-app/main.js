@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     elem.classList.add("flex-row");
 
     elem.innerHTML = `
-          <label class="list-item">
+       <label class="list-item">
         <input type="checkbox" name="todoItem" ${isChecked ? "checked" : ""}>
         <span class="checkmark"></span>
         <span class="text">${text}</span>
@@ -64,9 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
      // Hide the item if the completed filter is selected
     if (
-      document.querySelector('.filter input[type="radio"]:checked').id ===
-      "completed"
-    ) {
+      document.querySelector('.filter input[type="radio"]:checked').id === "completed") {
       elem.classList.add("hidden");
     }
 
@@ -90,9 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 // Event listener for removing and editing tasks
-  todoList.addEventListener("click", (event) => {
+todoList.addEventListener("click", (event) => {
     if (event.target.classList.contains("remove")) {
       removeTodoItem(event.target.parentElement);
+    } else if (event.target.classList.contains("edit")) {
+      editTodoItem(event.target.parentElement.parentElement);
     }
   });
   
